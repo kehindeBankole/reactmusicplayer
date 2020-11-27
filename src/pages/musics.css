@@ -1,0 +1,92 @@
+#musicpage {
+  padding-top: 5em;
+  margin-left: var(--mobilenavwidth);
+  padding-bottom: 5em;
+  position: relative;
+}
+.songcontainer {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  overflow-x: scroll;
+  padding-bottom: 2em;
+}
+.allcontainer {
+  box-sizing: border-box;
+  margin-top: 2em;
+  display: block;
+  padding-bottom: 2em;
+  grid-gap: 20px;
+}
+.allcontainer div {
+  margin-bottom: 2em;
+}
+::-webkit-scrollbar {
+  height: 8px;
+  width: 4px;
+  border: 1px solid #d5d5d5;
+  background-color: #297bb6;
+  border-radius: 100px;
+  cursor: pointer;
+}
+::-webkit-scrollbar-thumb {
+  border-radius: 100px;
+  background: #333399;
+  height: 4px;
+}
+#slider {
+  display: none;
+}
+.topicons {
+  position: absolute;
+  right: 50px;
+  top: 20px;
+  display: flex;
+}
+.topicons button#click{
+  border-radius: 25px;
+  padding: 3px 0;
+  width: 100px;
+  height: 30px;
+  font-size:xx-small;
+  font-weight: 700;
+  text-transform: uppercase;
+  position: relative;
+}
+.topicons button#click span{
+  margin-right: 10px;
+}
+.topicons .btnicon{
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border-radius: 50%;
+}
+#play{
+position: absolute;
+right: -20;
+top:-8px;
+font-size: 5em;
+color :  #333399;
+border: 10px solid #333399;
+border-radius: 50%;
+background-color: white;
+}
+
+.topicons button:not(#share) {
+ margin-right:3em;
+}
+@media (min-width: 992px) {
+  #musicpage {
+    margin-left: var(--desktopnavwidth);
+  }
+  #slider {
+    display: block;
+  }
+  .allcontainer {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .allcontainer div {
+    margin: 0;
+  }
+}

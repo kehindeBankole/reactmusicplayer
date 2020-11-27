@@ -1,0 +1,89 @@
+header nav#homenav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #081a26;
+  padding: 2%;
+}
+
+header nav#homenav .nav-content {
+  float: right !important;
+}
+header nav#homenav ul {
+  list-style: none;
+}
+header nav#homenav ul li .btn {
+  border: 0;
+  background-color: #2b80b8;
+  padding: 1em 2em;
+  color: white;
+  cursor: pointer;
+}
+header nav#homenav .logo h1 {
+  font-size: medium;
+  color: white;
+}
+#musicmenu {
+  width: var(--mobilenavwidth);
+  background-color: #2b80b8;
+  position: fixed;
+  height: 100%;
+  overflow: hidden;
+  z-index: 999;
+  margin: 0;
+  padding: 0;
+  top: 0;
+  left: 0;
+  overflow-y: scroll;
+}
+#musicmenu ul {
+  display: flex;
+  flex-direction: column;
+  padding-right: 1em;
+}
+#musicmenu ul li {
+  list-style: none;
+  text-transform: capitalize;
+  display: flex;
+
+}
+#musicmenu ul .nav-item {
+  padding-bottom: 1em;
+  padding-left: 12px;
+  margin-top: 1em;
+  color: white;
+  cursor: pointer;
+  display: flex !important;
+  font-size: small;
+}
+#musicmenu ul .nav-item div {
+  padding-left: 10px;
+}
+#musicmenu ul .nav-item div:nth-child(2){
+  display: none;
+}
+#newplaylist button{
+  background-color: rebeccapurple;
+  border-radius: 50px;
+  text-transform: uppercase;
+  display: none;
+}
+@media (min-width: 992px) {
+  header nav .logo h1 {
+    font-size: xx-large;
+  }
+  #musicmenu {
+    width: var(--desktopnavwidth);
+  }
+  #musicmenu ul .nav-item {
+    padding: 1em;
+    margin-top: 1em;
+  }
+  #musicmenu ul .nav-item div:nth-child(2){
+    display: block;
+  }
+  #newplaylist button{
+   display: block;
+  }
+}

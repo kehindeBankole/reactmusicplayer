@@ -1,0 +1,68 @@
+.player {
+  position: fixed;
+  display: grid;
+  background-color: #333399;
+  bottom: 0;
+  left: 0;
+  z-index: 9999;
+  width: 100%;
+  box-sizing: border-box;
+  grid-template-columns: 100px auto;
+  padding: 1em;
+  color: white;
+}
+/* #ddd{
+  display: flex;
+} */
+.player #ddd{
+  margin-top: 0.7em;
+  display: grid;
+  grid-template-columns:  50px 80px 100px 50px 50px 50px
+}
+.img{
+  display: none;
+}
+.volume , .time{
+  margin-left: 20px;
+
+}
+
+.controlicon , .volume input{
+  cursor: pointer;
+}
+.playpause{
+    display: flex;
+    justify-content: space-between;
+}
+.musicname {
+    padding-top: 5px;
+}
+.navigate{
+  padding-top: 5px;
+}
+.volume , .shuffle{
+  margin-top: 5px; 
+}
+.navigate , .volume input , .time{
+    margin-top: 5px;
+}
+
+.player img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+@media(min-width:992px){
+  .player{
+    grid-template-columns: 80px auto
+  }
+  .player #ddd{
+    margin-top: 0.7em;
+    display: grid;
+    grid-template-columns: 150px 100px 700px 70px 70px 70px
+  }
+  .img{
+    display:block;
+  }
+}
